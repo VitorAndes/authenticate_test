@@ -16,8 +16,6 @@ export interface LoginResponse {
   session: string;
 }
 
-// export const revalidate = 0;
-
 export async function GET(request: NextRequest) {
   const cookiesStore = await cookies();
   const authCookie = cookiesStore.get("auth-session");
